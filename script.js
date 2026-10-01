@@ -1,5 +1,10 @@
-//your JS code here. If required.
-const timerDetails = document.getElementById("time")
-let time = new Date()
-	timerDetails.innerHtml = time
-	
+const timerDetails = document.getElementById("timer");
+
+function updateTimer() {
+    const time = new Date();
+    timerDetails.textContent = time;
+}
+
+updateTimer();
+
+setInterval(updateTimer, 1000);
